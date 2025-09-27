@@ -23,6 +23,7 @@ const iconMap: { [key: string]: any } = {
 export default function Groups() {
   const [activeCategory, setActiveCategory] = useState('');
   const [groupsData, setGroupsData] = useState<GroupsData>({ categories: [] });
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const fetchGroupsData = async () => {
@@ -42,6 +43,21 @@ export default function Groups() {
     fetchGroupsData();
   }, []);
 
+  // Fechar dropdown quando clicar fora
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (isDropdownOpen && !target.closest('.dropdown-container')) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
@@ -50,21 +66,51 @@ export default function Groups() {
           <p className="text-xl text-gray-600">Escolha a categoria que mais se adequa ao seu perfil</p>
         </div>
 
-        <div className="flex flex-wrap justify-center mb-8 bg-white rounded-2xl p-2 shadow-sm">
-          {groupsData.categories.map((category) => (
+        <div className="flex justify-center mb-8">
+          <div className="relative dropdown-container">
             <button
-              key={category.key}
-              onClick={() => setActiveCategory(category.key)}
-              className={`rounded-lg whitespace-nowrap cursor-pointer px-6 py-3 font-medium transition-all duration-200 flex items-center space-x-2 ${
-                activeCategory === category.key
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-gray-600 hover:text-blue-600'
-              }`}
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="appearance-none bg-white border border-gray-300 rounded-lg px-6 py-3 pr-10 text-gray-700 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm cursor-pointer min-w-[200px] flex items-center justify-between"
             >
-              <FontAwesomeIcon icon={iconMap[category.icon]} />
-              <span>{category.label}</span>
+              <div className="flex items-center space-x-2">
+                {activeCategory && (
+                  <>
+                    <FontAwesomeIcon icon={iconMap[groupsData.categories.find(cat => cat.key === activeCategory)?.icon || 'faCode']} />
+                    <span>{groupsData.categories.find(cat => cat.key === activeCategory)?.label || 'Selecione uma categoria'}</span>
+                  </>
+                )}
+                {!activeCategory && (
+                  <span>Selecione uma categoria</span>
+                )}
+              </div>
+              <svg 
+                className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
             </button>
-          ))}
+            
+            {isDropdownOpen && (
+              <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10 max-h-60 overflow-y-auto">
+                {groupsData.categories.map((category) => (
+                  <button
+                    key={category.key}
+                    onClick={() => {
+                      setActiveCategory(category.key);
+                      setIsDropdownOpen(false);
+                    }}
+                    className="w-full px-6 py-3 text-left hover:bg-gray-50 flex items-center space-x-2 transition-colors duration-200"
+                  >
+                    <FontAwesomeIcon icon={iconMap[category.icon]} className="text-gray-600" />
+                    <span className="text-gray-700 font-medium">{category.label}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden">

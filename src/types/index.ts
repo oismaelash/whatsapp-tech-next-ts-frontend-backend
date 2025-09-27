@@ -6,15 +6,15 @@ export interface Group {
   description?: string;
 }
 
-export interface GroupsData {
-  [key: string]: Group[];
-}
-
 export interface Category {
   key: string;
   label: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  icon: any;
+  icon: string;
+  groups: Group[];
+}
+
+export interface GroupsData {
+  categories: Category[];
 }
 
 export interface EmailForm {

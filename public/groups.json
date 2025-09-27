@@ -1,122 +1,165 @@
 {
-  "frontend": [
+  "categories": [
     {
-      "name": "Vagas Frontend Brasil",
-      "members": "15.2k",
-      "category": "Frontend",
-      "whatsapp_link": "https://chat.whatsapp.com/example1",
-      "description": "Grupo principal para vagas de frontend no Brasil"
+      "key": "frontend",
+      "label": "Frontend",
+      "icon": "faCode",
+      "groups": [
+        {
+          "name": "Vagas Frontend Brasil",
+          "members": "15.2k",
+          "category": "Frontend",
+          "whatsapp_link": "https://chat.whatsapp.com/example1",
+          "description": "Grupo principal para vagas de frontend no Brasil"
+        },
+        {
+          "name": "React Jobs BR",
+          "members": "8.5k",
+          "category": "Frontend",
+          "whatsapp_link": "https://chat.whatsapp.com/example2",
+          "description": "Oportunidades específicas para desenvolvedores React"
+        },
+        {
+          "name": "Vue.js Vagas",
+          "members": "6.3k",
+          "category": "Frontend",
+          "whatsapp_link": "https://chat.whatsapp.com/example3",
+          "description": "Vagas e oportunidades para desenvolvedores Vue.js"
+        },
+        {
+          "name": "Angular Opportunities",
+          "members": "4.7k",
+          "category": "Frontend",
+          "whatsapp_link": "https://chat.whatsapp.com/example4",
+          "description": "Grupo focado em vagas para desenvolvedores Angular"
+        }
+      ]
     },
     {
-      "name": "React Jobs BR",
-      "members": "8.5k",
-      "category": "Frontend",
-      "whatsapp_link": "https://chat.whatsapp.com/example2",
-      "description": "Oportunidades específicas para desenvolvedores React"
+      "key": "backend",
+      "label": "Backend",
+      "icon": "faServer",
+      "groups": [
+        {
+          "name": "Vagas Backend Brasil",
+          "members": "12.8k",
+          "category": "Backend",
+          "whatsapp_link": "https://chat.whatsapp.com/example5",
+          "description": "Principais vagas de backend e desenvolvimento de APIs"
+        },
+        {
+          "name": "Node.js Jobs",
+          "members": "9.1k",
+          "category": "Backend",
+          "whatsapp_link": "https://chat.whatsapp.com/example6",
+          "description": "Oportunidades para desenvolvedores Node.js"
+        },
+        {
+          "name": "Python Vagas BR",
+          "members": "11.4k",
+          "category": "Backend",
+          "whatsapp_link": "https://chat.whatsapp.com/example7",
+          "description": "Vagas para desenvolvedores Python no Brasil"
+        },
+        {
+          "name": "Java Opportunities",
+          "members": "7.9k",
+          "category": "Backend",
+          "whatsapp_link": "https://chat.whatsapp.com/example8",
+          "description": "Oportunidades para desenvolvedores Java"
+        }
+      ]
     },
     {
-      "name": "Vue.js Vagas",
-      "members": "6.3k",
-      "category": "Frontend",
-      "whatsapp_link": "https://chat.whatsapp.com/example3",
-      "description": "Vagas e oportunidades para desenvolvedores Vue.js"
+      "key": "mobile",
+      "label": "Mobile",
+      "icon": "faMobileAlt",
+      "groups": [
+        {
+          "name": "Vagas Mobile Brasil",
+          "members": "10.3k",
+          "category": "Mobile",
+          "whatsapp_link": "https://chat.whatsapp.com/example9",
+          "description": "Grupo principal para vagas de desenvolvimento mobile"
+        },
+        {
+          "name": "React Native Jobs",
+          "members": "6.8k",
+          "category": "Mobile",
+          "whatsapp_link": "https://chat.whatsapp.com/example10",
+          "description": "Oportunidades específicas para React Native"
+        },
+        {
+          "name": "Flutter Vagas",
+          "members": "5.2k",
+          "category": "Mobile",
+          "whatsapp_link": "https://chat.whatsapp.com/example11",
+          "description": "Vagas para desenvolvedores Flutter"
+        },
+        {
+          "name": "iOS/Android Jobs",
+          "members": "8.7k",
+          "category": "Mobile",
+          "whatsapp_link": "https://chat.whatsapp.com/example12",
+          "description": "Vagas para desenvolvimento nativo iOS e Android"
+        }
+      ]
     },
     {
-      "name": "Angular Opportunities",
-      "members": "4.7k",
-      "category": "Frontend",
-      "whatsapp_link": "https://chat.whatsapp.com/example4",
-      "description": "Grupo focado em vagas para desenvolvedores Angular"
-    }
-  ],
-  "backend": [
-    {
-      "name": "Vagas Backend Brasil",
-      "members": "12.8k",
-      "category": "Backend",
-      "whatsapp_link": "https://chat.whatsapp.com/example5",
-      "description": "Principais vagas de backend e desenvolvimento de APIs"
+      "key": "geral",
+      "label": "Geral",
+      "icon": "faLaptopCode",
+      "groups": [
+        {
+          "name": "Vagas Tech Brasil",
+          "members": "25.6k",
+          "category": "Geral",
+          "whatsapp_link": "https://chat.whatsapp.com/example13",
+          "description": "Maior grupo de vagas de tecnologia do Brasil"
+        },
+        {
+          "name": "Oportunidades TI",
+          "members": "18.9k",
+          "category": "Geral",
+          "whatsapp_link": "https://chat.whatsapp.com/example14",
+          "description": "Diversas oportunidades na área de TI"
+        },
+        {
+          "name": "Tech Jobs Community",
+          "members": "14.2k",
+          "category": "Geral",
+          "whatsapp_link": "https://chat.whatsapp.com/example15",
+          "description": "Comunidade ativa para oportunidades em tecnologia"
+        },
+        {
+          "name": "Startups Vagas",
+          "members": "12.1k",
+          "category": "Geral",
+          "whatsapp_link": "https://chat.whatsapp.com/example16",
+          "description": "Vagas em startups e empresas inovadoras"
+        }
+      ]
     },
     {
-      "name": "Node.js Jobs",
-      "members": "9.1k",
-      "category": "Backend",
-      "whatsapp_link": "https://chat.whatsapp.com/example6",
-      "description": "Oportunidades para desenvolvedores Node.js"
-    },
-    {
-      "name": "Python Vagas BR",
-      "members": "11.4k",
-      "category": "Backend",
-      "whatsapp_link": "https://chat.whatsapp.com/example7",
-      "description": "Vagas para desenvolvedores Python no Brasil"
-    },
-    {
-      "name": "Java Opportunities",
-      "members": "7.9k",
-      "category": "Backend",
-      "whatsapp_link": "https://chat.whatsapp.com/example8",
-      "description": "Oportunidades para desenvolvedores Java"
-    }
-  ],
-  "mobile": [
-    {
-      "name": "Vagas Mobile Brasil",
-      "members": "10.3k",
-      "category": "Mobile",
-      "whatsapp_link": "https://chat.whatsapp.com/example9",
-      "description": "Grupo principal para vagas de desenvolvimento mobile"
-    },
-    {
-      "name": "React Native Jobs",
-      "members": "6.8k",
-      "category": "Mobile",
-      "whatsapp_link": "https://chat.whatsapp.com/example10",
-      "description": "Oportunidades específicas para React Native"
-    },
-    {
-      "name": "Flutter Vagas",
-      "members": "5.2k",
-      "category": "Mobile",
-      "whatsapp_link": "https://chat.whatsapp.com/example11",
-      "description": "Vagas para desenvolvedores Flutter"
-    },
-    {
-      "name": "iOS/Android Jobs",
-      "members": "8.7k",
-      "category": "Mobile",
-      "whatsapp_link": "https://chat.whatsapp.com/example12",
-      "description": "Vagas para desenvolvimento nativo iOS e Android"
-    }
-  ],
-  "geral": [
-    {
-      "name": "Vagas Tech Brasil",
-      "members": "25.6k",
-      "category": "Geral",
-      "whatsapp_link": "https://chat.whatsapp.com/example13",
-      "description": "Maior grupo de vagas de tecnologia do Brasil"
-    },
-    {
-      "name": "Oportunidades TI",
-      "members": "18.9k",
-      "category": "Geral",
-      "whatsapp_link": "https://chat.whatsapp.com/example14",
-      "description": "Diversas oportunidades na área de TI"
-    },
-    {
-      "name": "Tech Jobs Community",
-      "members": "14.2k",
-      "category": "Geral",
-      "whatsapp_link": "https://chat.whatsapp.com/example15",
-      "description": "Comunidade ativa para oportunidades em tecnologia"
-    },
-    {
-      "name": "Startups Vagas",
-      "members": "12.1k",
-      "category": "Geral",
-      "whatsapp_link": "https://chat.whatsapp.com/example16",
-      "description": "Vagas em startups e empresas inovadoras"
+      "key": "devops",
+      "label": "DevOps",
+      "icon": "faServer",
+      "groups": [
+        {
+          "name": "DevOps Brasil",
+          "members": "8.5k",
+          "category": "DevOps",
+          "whatsapp_link": "https://chat.whatsapp.com/example17",
+          "description": "Vagas e discussões sobre DevOps e infraestrutura"
+        },
+        {
+          "name": "Cloud Jobs BR",
+          "members": "6.2k",
+          "category": "DevOps",
+          "whatsapp_link": "https://chat.whatsapp.com/example18",
+          "description": "Oportunidades em cloud computing e AWS/Azure/GCP"
+        }
+      ]
     }
   ]
 }

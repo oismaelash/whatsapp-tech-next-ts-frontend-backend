@@ -20,23 +20,20 @@ import {
   faWhatsapp as faWhatsappBrand,
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
-import { GroupsData, Category, EmailForm, ContactForm } from '@/types';
+import { GroupsData, EmailForm, ContactForm } from '@/types';
 
-const categories: Category[] = [
-  { key: "frontend", label: "Frontend", icon: faCode },
-  { key: "backend", label: "Backend", icon: faServer },
-  { key: "mobile", label: "Mobile", icon: faMobileAlt },
-  { key: "geral", label: "Geral", icon: faLaptopCode }
-];
+// Mapeamento de ícones para strings
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const iconMap: { [key: string]: any } = {
+  faCode,
+  faServer,
+  faMobileAlt,
+  faLaptopCode
+};
 
 export default function Home() {
-  const [activeCategory, setActiveCategory] = useState('frontend');
-  const [groupsData, setGroupsData] = useState<GroupsData>({
-    frontend: [],
-    backend: [],
-    mobile: [],
-    geral: []
-  });
+  const [activeCategory, setActiveCategory] = useState('');
+  const [groupsData, setGroupsData] = useState<GroupsData>({ categories: [] });
   const [emailForm, setEmailForm] = useState<EmailForm>({ name: '', email: '' });
   const [contactForm, setContactForm] = useState<ContactForm>({
     contact_type: 'broken_link',
@@ -52,6 +49,10 @@ export default function Home() {
         const response = await fetch('/groups.json');
         const data = await response.json();
         setGroupsData(data);
+        // Define a primeira categoria como ativa por padrão
+        if (data.categories && data.categories.length > 0) {
+          setActiveCategory(data.categories[0].key);
+        }
       } catch (error) {
         console.error('Erro ao carregar dados dos grupos:', error);
       }
@@ -205,7 +206,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap justify-center mb-8 bg-white rounded-2xl p-2 shadow-sm">
-            {categories.map((category) => (
+            {groupsData.categories.map((category) => (
               <button
                 key={category.key}
                 onClick={() => setActiveCategory(category.key)}
@@ -215,45 +216,52 @@ export default function Home() {
                     : 'text-gray-600 hover:text-blue-600'
                 }`}
               >
-                <FontAwesomeIcon icon={category.icon} />
+                <FontAwesomeIcon icon={iconMap[category.icon]} />
                 <span>{category.label}</span>
               </button>
             ))}
           </div>
 
           <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-            {groupsData[activeCategory].map((group, index) => (
-              <div
-                key={index}
-                className={`flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 ${
-                  index !== groupsData[activeCategory].length - 1 ? 'border-b border-gray-100' : ''
-                }`}
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                    <FontAwesomeIcon icon={faWhatsappBrand} className="text-lg text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">{group.name}</h3>
-                    <div className="flex items-center space-x-3 mt-1">
-                      <span className="text-sm text-gray-500">{group.members} membros</span>
-                      <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full">
-                        {group.category}
-                      </span>
+            {groupsData.categories
+              .find(category => category.key === activeCategory)
+              ?.groups.map((group, index) => {
+                const activeCategoryData = groupsData.categories.find(cat => cat.key === activeCategory);
+                const isLastItem = index === (activeCategoryData?.groups.length || 0) - 1;
+                
+                return (
+                  <div
+                    key={index}
+                    className={`flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 ${
+                      !isLastItem ? 'border-b border-gray-100' : ''
+                    }`}
+                  >
+                    <div className="flex items-center space-x-4">
+                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                        <FontAwesomeIcon icon={faWhatsappBrand} className="text-lg text-green-600" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900">{group.name}</h3>
+                        <div className="flex items-center space-x-3 mt-1">
+                          <span className="text-sm text-gray-500">{group.members} membros</span>
+                          <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full">
+                            {group.category}
+                          </span>
+                        </div>
+                      </div>
                     </div>
+                    <a 
+                      href={group.whatsapp_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg whitespace-nowrap cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm font-medium transition-colors duration-200 flex items-center space-x-2"
+                    >
+                      <FontAwesomeIcon icon={faWhatsappBrand} />
+                      <span>Entrar no grupo</span>
+                    </a>
                   </div>
-                </div>
-                <a 
-                  href={group.whatsapp_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-lg whitespace-nowrap cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm font-medium transition-colors duration-200 flex items-center space-x-2"
-                >
-                  <FontAwesomeIcon icon={faWhatsappBrand} />
-                  <span>Entrar no grupo</span>
-                </a>
-              </div>
-            ))}
+                );
+              })}
           </div>
         </div>
       </section>

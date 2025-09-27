@@ -18,7 +18,7 @@ export default function Home() {
       <Features />
       <CTA />
       <Groups />
-      <Newsletter />
+      {/* <Newsletter /> */}
       <OpenSource />
       {/* <Contact /> */}
       <Footer />

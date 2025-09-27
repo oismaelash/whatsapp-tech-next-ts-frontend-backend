@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
         <p className="text-gray-400 mb-6">Projeto independente para ajudar a comunidade de tecnologia. Atualizado periodicamente.</p>
         <div className="flex justify-center space-x-6">
-          <a href="#" className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-200">
+          <a href={process.env.NEXT_PUBLIC_REPOSITORY_URL} className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-200">
             <FontAwesomeIcon icon={faGithub} className="text-xl" />
           </a>
         </div>

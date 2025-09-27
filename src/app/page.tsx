@@ -128,14 +128,14 @@ export default function Home() {
           }}
         />
         
-        <nav className="relative z-10 px-6 py-4">
+        {/* <nav className="relative z-10 px-6 py-4">
           <div className="max-w-7xl mx-auto flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <FontAwesomeIcon icon={faWhatsappBrand} className="text-2xl text-green-600" />
               <span className="text-xl font-bold text-gray-800">TechVagas</span>
             </div>
           </div>
-        </nav>
+        </nav> */}
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 lg:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

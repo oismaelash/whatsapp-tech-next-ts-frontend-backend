@@ -1,37 +1,76 @@
 {
   "categories": [
     {
+      "key": "vagas",
+      "label": "Vagas de Emprego",
+      "icon": "FaBriefcase",
+      "groups": [
+        {
+          "name": "EMPREGOS E ESTÁGIOS DE T.I",
+          "whatsapp_link": "https://chat.whatsapp.com/E84tKYKX9g9L3b0eqdDo5S"
+        },
+        {
+          "name": "Vagas de TI - Grupo 1",
+          "whatsapp_link": "https://chat.whatsapp.com/BQ9CmDWQDPn5QugUKhmfhR"
+        },
+        {
+          "name": "Vagas de TI - Grupo 2",
+          "whatsapp_link": "https://chat.whatsapp.com/KGaSko4xnp328GMROuFBwF"
+        },
+        {
+          "name": "[CE] Vagas de TI",
+          "whatsapp_link": "https://wa.me/5585996347143?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Vagas de T.I & Carreira",
+          "whatsapp_link": "https://wa.me/5524992636548?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Vagas Tech - Agilizem",
+          "whatsapp_link": "https://chat.whatsapp.com/K3qg1rlTngA7dJmG0LsgxA"
+        },
+        {
+          "name": "QA Vagas + Inglês",
+          "whatsapp_link": "https://wa.me/5511974861688?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Vagas Noorden",
+          "whatsapp_link": "https://wa.me/5511940416240?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Coding Aracati [Vagas]",
+          "whatsapp_link": "https://chat.whatsapp.com/DC8LeKm1gLt1tEoKvIIowc"
+        }
+      ]
+    },
+    {
       "key": "frontend",
       "label": "Frontend",
       "icon": "faCode",
       "groups": [
         {
-          "name": "Vagas Frontend Brasil",
-          "members": "15.2k",
-          "category": "Frontend",
-          "whatsapp_link": "https://wa.me/5511967435133?text=Gostaria de entrar na comunidade/grupo {group_name}",
-          "description": "Grupo principal para vagas de frontend no Brasil"
+          "name": "JavaScript Ceará",
+          "whatsapp_link": "https://chat.whatsapp.com/H0wNWNHLwsiDGOeK0wY1Jr"
         },
         {
-          "name": "React Jobs BR",
-          "members": "8.5k",
-          "category": "Frontend",
-          "whatsapp_link": "https://chat.whatsapp.com/example2",
-          "description": "Oportunidades específicas para desenvolvedores React"
+          "name": "Comunidade House JS",
+          "whatsapp_link": "https://wa.me/5585994132366?text=Gostaria de entrar na comunidade/grupo {group_name}"
         },
         {
-          "name": "Vue.js Vagas",
-          "members": "6.3k",
-          "category": "Frontend",
-          "whatsapp_link": "https://chat.whatsapp.com/example3",
-          "description": "Vagas e oportunidades para desenvolvedores Vue.js"
+          "name": "JavaScript Devs",
+          "whatsapp_link": "https://wa.me/5544997327877?text=Gostaria de entrar na comunidade/grupo {group_name}"
         },
         {
-          "name": "Angular Opportunities",
-          "members": "4.7k",
-          "category": "Frontend",
-          "whatsapp_link": "https://chat.whatsapp.com/example4",
-          "description": "Grupo focado em vagas para desenvolvedores Angular"
+          "name": "Front-End CE | Oficial",
+          "whatsapp_link": "https://chat.whatsapp.com/CC1kVxujnarDFnWguNvdWo"
+        },
+        {
+          "name": "Casa do Dev - Frontend",
+          "whatsapp_link": "https://wa.me/5511954968220?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "CodeSync desenvolvimento web",
+          "whatsapp_link": "https://chat.whatsapp.com/BmZItXijwoZ04F14lC2kss"
         }
       ]
     },
@@ -41,125 +80,192 @@
       "icon": "faServer",
       "groups": [
         {
-          "name": "Vagas Backend Brasil",
-          "members": "12.8k",
-          "category": "Backend",
-          "whatsapp_link": "https://chat.whatsapp.com/example5",
-          "description": "Principais vagas de backend e desenvolvimento de APIs"
+          "name": "Back-end CE | Oficial",
+          "whatsapp_link": "https://chat.whatsapp.com/FqoStwP4thbJVIeZ736u5s"
         },
         {
-          "name": "Node.js Jobs",
-          "members": "9.1k",
-          "category": "Backend",
-          "whatsapp_link": "https://chat.whatsapp.com/example6",
-          "description": "Oportunidades para desenvolvedores Node.js"
+          "name": "Javax CE",
+          "whatsapp_link": "https://chat.whatsapp.com/KRvBeHJThGyBVFBK92m3IR"
         },
         {
-          "name": "Python Vagas BR",
-          "members": "11.4k",
-          "category": "Backend",
-          "whatsapp_link": "https://chat.whatsapp.com/example7",
-          "description": "Vagas para desenvolvedores Python no Brasil"
+          "name": "C# Developers",
+          "whatsapp_link": "https://chat.whatsapp.com/EVIJ1ebawmj7qQuH4ZfLkC"
         },
         {
-          "name": "Java Opportunities",
-          "members": "7.9k",
-          "category": "Backend",
-          "whatsapp_link": "https://chat.whatsapp.com/example8",
-          "description": "Oportunidades para desenvolvedores Java"
+          "name": "PUG-CE",
+          "whatsapp_link": "https://chat.whatsapp.com/EM5Jbsrgpjp4xqarqesseW"
         }
       ]
     },
     {
       "key": "mobile",
       "label": "Mobile",
-      "icon": "faMobileAlt",
+      "icon": "faMobile",
       "groups": [
         {
-          "name": "Vagas Mobile Brasil",
-          "members": "10.3k",
-          "category": "Mobile",
-          "whatsapp_link": "https://chat.whatsapp.com/example9",
-          "description": "Grupo principal para vagas de desenvolvimento mobile"
+          "name": "Mobile Devs Ceará",
+          "whatsapp_link": "https://wa.me/5585992820301?text=Gostaria de entrar na comunidade/grupo {group_name}"
         },
         {
-          "name": "React Native Jobs",
-          "members": "6.8k",
-          "category": "Mobile",
-          "whatsapp_link": "https://chat.whatsapp.com/example10",
-          "description": "Oportunidades específicas para React Native"
+          "name": "Desenvolvedores Android Brasil",
+          "whatsapp_link": "https://chat.whatsapp.com/LxtIQ3xA64x5FC8qWvDAqS"
         },
         {
-          "name": "Flutter Vagas",
-          "members": "5.2k",
-          "category": "Mobile",
-          "whatsapp_link": "https://chat.whatsapp.com/example11",
-          "description": "Vagas para desenvolvedores Flutter"
+          "name": "Kotlin/KMP/Android - Mobile Devs Ceará",
+          "whatsapp_link": "https://wa.me/5521992717145?text=Gostaria de entrar na comunidade/grupo {group_name}"
         },
         {
-          "name": "iOS/Android Jobs",
-          "members": "8.7k",
-          "category": "Mobile",
-          "whatsapp_link": "https://chat.whatsapp.com/example12",
-          "description": "Vagas para desenvolvimento nativo iOS e Android"
+          "name": "Swift/IOS - Mobile Devs Ceará",
+          "whatsapp_link": "https://wa.me/5511987054721?text=Gostaria de entrar na comunidade/grupo {group_name}"
         }
       ]
     },
     {
-      "key": "geral",
-      "label": "Geral",
-      "icon": "faLaptopCode",
+      "key": "cloud-devops",
+      "label": "Cloud & DevOps",
+      "icon": "faCloud",
       "groups": [
         {
-          "name": "Vagas Tech Brasil",
-          "members": "25.6k",
-          "category": "Geral",
-          "whatsapp_link": "https://chat.whatsapp.com/example13",
-          "description": "Maior grupo de vagas de tecnologia do Brasil"
+          "name": "DevOps-CE",
+          "whatsapp_link": "https://chat.whatsapp.com/FDXwtB61BDsKMmrRiCtvtT"
         },
         {
-          "name": "Oportunidades TI",
-          "members": "18.9k",
-          "category": "Geral",
-          "whatsapp_link": "https://chat.whatsapp.com/example14",
-          "description": "Diversas oportunidades na área de TI"
+          "name": "AWS Users Group CE",
+          "whatsapp_link": "https://chat.whatsapp.com/FnnTBGJ2aW83tkQ8zrxNTy"
         },
         {
-          "name": "Tech Jobs Community",
-          "members": "14.2k",
-          "category": "Geral",
-          "whatsapp_link": "https://chat.whatsapp.com/example15",
-          "description": "Comunidade ativa para oportunidades em tecnologia"
+          "name": "Cloud Hero",
+          "whatsapp_link": "https://wa.me/5511984444582?text=Gostaria de entrar na comunidade/grupo {group_name}"
         },
         {
-          "name": "Startups Vagas",
-          "members": "12.1k",
-          "category": "Geral",
-          "whatsapp_link": "https://chat.whatsapp.com/example16",
-          "description": "Vagas em startups e empresas inovadoras"
+          "name": "FinOps Foundation Brasil",
+          "whatsapp_link": "https://wa.me/5511948958330?text=Gostaria de entrar na comunidade/grupo {group_name}"
         }
       ]
     },
     {
-      "key": "devops",
-      "label": "DevOps",
-      "icon": "faServer",
+      "key": "ux-ui",
+      "label": "UX/UI Design",
+      "icon": "faPalette",
       "groups": [
         {
-          "name": "DevOps Brasil",
-          "members": "8.5k",
-          "category": "DevOps",
-          "whatsapp_link": "https://chat.whatsapp.com/example17",
-          "description": "Vagas e discussões sobre DevOps e infraestrutura"
+          "name": "Comunidade UX For",
+          "whatsapp_link": "https://wa.me/5585987777772?text=Gostaria de entrar na comunidade/grupo {group_name}"
         },
         {
-          "name": "Cloud Jobs BR",
-          "members": "6.2k",
-          "category": "DevOps",
-          "whatsapp_link": "https://chat.whatsapp.com/example18",
-          "description": "Oportunidades em cloud computing e AWS/Azure/GCP"
+          "name": "UX Circle - Para fundadores de SaaS",
+          "whatsapp_link": "https://wa.me/5511942855440?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Product Marketing em Fortal",
+          "whatsapp_link": "https://wa.me/5511997805587?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        }
+      ]
+    },
+    {
+      "key": "ai-ml",
+      "label": "Inteligência Artificial",
+      "icon": "faRobot",
+      "groups": [
+        {
+          "name": "Artificial Valley",
+          "whatsapp_link": "https://chat.whatsapp.com/DHDGIcVPVcz8ApmthWXOLV"
+        },
+        {
+          "name": "Amigos da IA CWB",
+          "whatsapp_link": "https://chat.whatsapp.com/DJb3R75OlKi5lxtmqL6ff6"
+        }
+      ]
+    },
+    {
+      "key": "comunidades-locais",
+      "label": "Comunidades Locais",
+      "icon": "faUsers",
+      "groups": [
+        {
+          "name": "GTS-CE",
+          "whatsapp_link": "https://chat.whatsapp.com/Ix8I9TeBJMHDx68bxMSArQ"
+        },
+        {
+          "name": "Devs Norte",
+          "whatsapp_link": "https://wa.me/5591982451904?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Devs Uberlandia",
+          "whatsapp_link": "https://wa.me/5534999579700?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Devs SP",
+          "whatsapp_link": "https://wa.me/5511977223000?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Baião Tech - Oficial",
+          "whatsapp_link": "https://chat.whatsapp.com/HosSpUSEW8gBhLDboyT4cB"
+        },
+        {
+          "name": "Coding Aracati",
+          "whatsapp_link": "https://wa.me/5588999855554?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Google Developers Group - Fortaleza",
+          "whatsapp_link": "https://wa.me/5585991814996?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        }
+      ]
+    },
+    {
+      "key": "carreira-mentoria",
+      "label": "Carreira & Mentoria",
+      "icon": "faGraduationCap",
+      "groups": [
+        {
+          "name": "Amigos Profissionais - TI",
+          "whatsapp_link": "https://wa.me/5511996013203?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "CARREIRA & MENTORIA",
+          "whatsapp_link": "https://wa.me/5524992636548?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Open Source for Juniors",
+          "whatsapp_link": "https://wa.me/5511940337378?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        }
+      ]
+    },
+    {
+      "key": "comunidades-gerais",
+      "label": "Comunidades Gerais",
+      "icon": "faGlobe",
+      "groups": [
+        {
+          "name": "Comunidade Roga DX",
+          "whatsapp_link": "https://chat.whatsapp.com/LQVdVslczwW0USO20btTAn"
+        },
+        {
+          "name": "Comunidade NexTI",
+          "whatsapp_link": "https://wa.me/5511984479778?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "S7ven Code",
+          "whatsapp_link": "https://wa.me/5551981128102?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "WPFor - Membros",
+          "whatsapp_link": "https://chat.whatsapp.com/BRbbFvCSkKJ6Plwr07bkvX"
+        },
+        {
+          "name": "DEV HOUSE",
+          "whatsapp_link": "https://wa.me/5585996993146?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "T.I [Suporte Geral]",
+          "whatsapp_link": "https://wa.me/5562981000806?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "EventDev - Oficial",
+          "whatsapp_link": "https://wa.me/5511981170999?text=Gostaria de entrar na comunidade/grupo {group_name}"
         }
       ]
     }
   ]
 }
+

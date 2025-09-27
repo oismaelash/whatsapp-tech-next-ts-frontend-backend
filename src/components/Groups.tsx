@@ -134,10 +134,10 @@ export default function Groups() {
                     <div className="min-w-0 flex-1">
                       <h3 className="font-semibold text-gray-900 text-sm md:text-base truncate">{group.name}</h3>
                       <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 mt-1 space-y-1 sm:space-y-0">
-                        <span className="text-xs md:text-sm text-gray-500">{group.members} membros</span>
-                        <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full w-fit">
+                        {/* <span className="text-xs md:text-sm text-gray-500">{group.members} membros</span> */}
+                        {/* <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full w-fit">
                           {group.category}
-                        </span>
+                        </span> */}
                       </div>
                     </div>
                   </div>

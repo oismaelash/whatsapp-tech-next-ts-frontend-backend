@@ -1,0 +1,207 @@
+{
+  "categories": [
+    {
+      "key": "frontend",
+      "label": "Frontend",
+      "icon": "faCode",
+      "groups": [
+        {
+          "name": "EMPREGOS E ESTÁGIOS DE T.I",
+          "whatsapp_link": "https://chat.whatsapp.com/E84tKYKX9g9L3b0eqdDo5S"
+        },
+        {
+          "name": "JavaScript Ceará",
+          "whatsapp_link": "https://chat.whatsapp.com/H0wNWNHLwsiDGOeK0wY1Jr"
+        },
+        {
+          "name": "Artificial Valley",
+          "whatsapp_link": "https://chat.whatsapp.com/DHDGIcVPVcz8ApmthWXOLV"
+        },
+        {
+          "name": "GTS-CE",
+          "whatsapp_link": "https://chat.whatsapp.com/Ix8I9TeBJMHDx68bxMSArQ"
+        },
+        {
+          "name": "Vagas de TI - Grupo 1",
+          "whatsapp_link": "https://chat.whatsapp.com/BQ9CmDWQDPn5QugUKhmfhR"
+        },
+        {
+          "name": "Vagas de TI - Grupo 2",
+          "whatsapp_link": "https://chat.whatsapp.com/KGaSko4xnp328GMROuFBwF"
+        },
+        {
+          "name": "Devs Norte",
+          "whatsapp_link": "https://wa.me/5591982451904?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Mobile Devs Ceará",
+          "whatsapp_link": "https://wa.me/5585992820301?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Devs Uberlandia",
+          "whatsapp_link": "https://wa.me/5534999579700?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Comunidade House JS",
+          "whatsapp_link": "https://wa.me/5585994132366?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Desenvolvedores Android Brasil",
+          "whatsapp_link": "https://chat.whatsapp.com/LxtIQ3xA64x5FC8qWvDAqS"
+        },
+        {
+          "name": "Amigos Profissionais - TI",
+          "whatsapp_link": "https://wa.me/5511996013203?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "DevOps-CE",
+          "whatsapp_link": "https://chat.whatsapp.com/FDXwtB61BDsKMmrRiCtvtT"
+        },
+        {
+          "name": "Comunidade Roga DX",
+          "whatsapp_link": "https://chat.whatsapp.com/LQVdVslczwW0USO20btTAn"
+        },
+        {
+          "name": "Javax CE",
+          "whatsapp_link": "https://chat.whatsapp.com/KRvBeHJThGyBVFBK92m3IR"
+        },
+        {
+          "name": "Comunidade UX For",
+          "whatsapp_link": "https://wa.me/5585987777772?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "[CE] Vagas de TI",
+          "whatsapp_link": "https://wa.me/5585996347143?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "T.I [Suporte Geral]",
+          "whatsapp_link": "https://wa.me/5562981000806?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Vagas de T.I & Carreira",
+          "whatsapp_link": "https://wa.me/5524992636548?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "AWS Users Group CE",
+          "whatsapp_link": "https://chat.whatsapp.com/FnnTBGJ2aW83tkQ8zrxNTy"
+        },
+        {
+          "name": "Cloud Hero",
+          "whatsapp_link": "https://wa.me/5511984444582?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Comunidade NexTI",
+          "whatsapp_link": "https://wa.me/5511984479778?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "C# Developers",
+          "whatsapp_link": "https://chat.whatsapp.com/EVIJ1ebawmj7qQuH4ZfLkC"
+        },
+        {
+          "name": "Kotlin/KMP/Android - Mobile Devs Ceará",
+          "whatsapp_link": "https://wa.me/5521992717145?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "FinOps Foundation Brasil",
+          "whatsapp_link": "https://wa.me/5511948958330?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "UX Circle - Para fundadores de SaaS",
+          "whatsapp_link": "https://wa.me/5511942855440?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "S7ven Code",
+          "whatsapp_link": "https://wa.me/5551981128102?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Product Marketing em Fortal",
+          "whatsapp_link": "https://wa.me/5511997805587?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Swift/IOS - Mobile Devs Ceará",
+          "whatsapp_link": "https://wa.me/5511987054721?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "CARREIRA & MENTORIA",
+          "whatsapp_link": "https://wa.me/5524992636548?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Baião Tech - Oficial",
+          "whatsapp_link": "https://chat.whatsapp.com/HosSpUSEW8gBhLDboyT4cB"
+        },
+        {
+          "name": "JavaScript Devs",
+          "whatsapp_link": "https://wa.me/5544997327877?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Back-end CE | Oficial",
+          "whatsapp_link": "https://chat.whatsapp.com/FqoStwP4thbJVIeZ736u5s"
+        },
+        {
+          "name": "WPFor - Membros",
+          "whatsapp_link": "https://chat.whatsapp.com/BRbbFvCSkKJ6Plwr07bkvX"
+        },
+        {
+          "name": "DEV HOUSE",
+          "whatsapp_link": "https://wa.me/5585996993146?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Front-End CE | Oficial",
+          "whatsapp_link": "https://chat.whatsapp.com/CC1kVxujnarDFnWguNvdWo"
+        },
+        {
+          "name": "PUG-CE",
+          "whatsapp_link": "https://chat.whatsapp.com/EM5Jbsrgpjp4xqarqesseW"
+        },
+        {
+          "name": "CodeSync desenvolvimento web",
+          "whatsapp_link": "https://chat.whatsapp.com/BmZItXijwoZ04F14lC2kss"
+        },
+        {
+          "name": "Vagas Tech - Agilizem",
+          "whatsapp_link": "https://chat.whatsapp.com/K3qg1rlTngA7dJmG0LsgxA"
+        },
+        {
+          "name": "Google Developers Group - Fortaleza",
+          "whatsapp_link": "https://wa.me/5585991814996?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Casa do Dev - Frontend",
+          "whatsapp_link": "https://wa.me/5511954968220?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "QA Vagas + Inglês",
+          "whatsapp_link": "https://wa.me/5511974861688?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "EventDev - Oficial",
+          "whatsapp_link": "https://wa.me/5511981170999?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Coding Aracati",
+          "whatsapp_link": "https://wa.me/5588999855554?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Devs SP",
+          "whatsapp_link": "https://wa.me/5511977223000?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Amigos da IA CWB",
+          "whatsapp_link": "https://chat.whatsapp.com/DJb3R75OlKi5lxtmqL6ff6"
+        },
+        {
+          "name": "Vagas Noorden",
+          "whatsapp_link": "https://wa.me/5511940416240?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        },
+        {
+          "name": "Coding Aracati [Vagas]",
+          "whatsapp_link": "https://chat.whatsapp.com/DC8LeKm1gLt1tEoKvIIowc"
+        },
+        {
+          "name": "Open Source for Juniors",
+          "whatsapp_link": "https://wa.me/5511940337378?text=Gostaria de entrar na comunidade/grupo {group_name}"
+        }
+      ]
+    }
+  ]
+}

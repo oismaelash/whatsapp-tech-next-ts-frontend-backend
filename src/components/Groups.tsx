@@ -24,6 +24,7 @@ export default function Groups() {
   const [activeCategory, setActiveCategory] = useState('');
   const [groupsData, setGroupsData] = useState<GroupsData>({ categories: [] });
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const fetchGroupsData = async () => {
@@ -49,6 +50,7 @@ export default function Groups() {
       const target = event.target as Element;
       if (isDropdownOpen && !target.closest('.dropdown-container')) {
         setIsDropdownOpen(false);
+        setSearchTerm('');
       }
     };
 
@@ -57,6 +59,18 @@ export default function Groups() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isDropdownOpen]);
+
+  // Limpar pesquisa quando dropdown for fechado
+  useEffect(() => {
+    if (!isDropdownOpen) {
+      setSearchTerm('');
+    }
+  }, [isDropdownOpen]);
+
+  // Filtrar categorias baseado no termo de pesquisa
+  const filteredCategories = groupsData.categories.filter(category =>
+    category.label.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <section id="groups" className="py-8 md:py-16 bg-gray-50">
@@ -94,20 +108,42 @@ export default function Groups() {
             </button>
             
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10 max-h-60 overflow-y-auto">
-                {groupsData.categories.map((category) => (
-                  <button
-                    key={category.key}
-                    onClick={() => {
-                      setActiveCategory(category.key);
-                      setIsDropdownOpen(false);
-                    }}
-                    className="w-full px-4 md:px-6 py-3 text-left hover:bg-gray-50 flex items-center space-x-2 transition-colors duration-200"
-                  >
-                    <FontAwesomeIcon icon={iconMap[category.icon]} className="text-gray-600" />
-                    <span className="text-gray-700 font-medium text-sm md:text-base">{category.label}</span>
-                  </button>
-                ))}
+              <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10 max-h-60 overflow-hidden">
+                {/* Campo de pesquisa */}
+                <div className="p-3 border-b border-gray-200">
+                  <input
+                    type="text"
+                    placeholder="Pesquisar categorias..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="text-black w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                </div>
+                
+                {/* Lista de categorias filtradas */}
+                <div className="max-h-48 overflow-y-auto">
+                  {filteredCategories.length > 0 ? (
+                    filteredCategories.map((category) => (
+                      <button
+                        key={category.key}
+                        onClick={() => {
+                          setActiveCategory(category.key);
+                          setIsDropdownOpen(false);
+                          setSearchTerm('');
+                        }}
+                        className="w-full px-4 md:px-6 py-3 text-left hover:bg-gray-50 flex items-center space-x-2 transition-colors duration-200"
+                      >
+                        <FontAwesomeIcon icon={iconMap[category.icon]} className="text-gray-600" />
+                        <span className="text-gray-700 font-medium text-sm md:text-base">{category.label}</span>
+                      </button>
+                    ))
+                  ) : (
+                    <div className="px-4 py-3 text-gray-500 text-sm text-center">
+                      Nenhuma categoria encontrada
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>

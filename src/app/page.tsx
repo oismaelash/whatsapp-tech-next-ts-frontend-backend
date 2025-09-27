@@ -95,6 +95,28 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Open Source Header */}
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col items-center space-y-3">
+          <div className="flex items-center space-x-3">
+            <FontAwesomeIcon icon={faGithub} className="text-xl" />
+            <span className="font-semibold text-base">🌟 Este projeto é Open Source!</span>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+            <span className="text-sm opacity-90 text-center sm:text-left">Contribua e ajude a comunidade</span>
+            <a 
+              href="https://github.com/oismaelash/whatsapp-jobs-next-ts-frontend-backend" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white text-purple-600 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center space-x-2 shadow-md hover:shadow-lg"
+            >
+              <FontAwesomeIcon icon={faGithub} className="text-sm" />
+              <span>Ver no GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <header className="bg-gradient-to-br from-blue-50 to-green-50 relative overflow-hidden">
         <div 
@@ -388,12 +410,12 @@ export default function Home() {
           </div>
           <p className="text-gray-400 mb-6">Projeto independente para ajudar a comunidade de tecnologia. Atualizado periodicamente.</p>
           <div className="flex justify-center space-x-6">
-            <a href="#" className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-200">
+            {/* <a href="#" className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-200">
               <FontAwesomeIcon icon={faTwitter} className="text-xl" />
             </a>
             <a href="#" className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-200">
               <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
-            </a>
+            </a> */}
             <a href="#" className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-200">
               <FontAwesomeIcon icon={faGithub} className="text-xl" />
             </a>

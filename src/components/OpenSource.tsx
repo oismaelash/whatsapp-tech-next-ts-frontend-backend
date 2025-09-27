@@ -58,7 +58,7 @@ export default function OpenSource() {
         
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a 
-            href="https://github.com/oismaelash/whatsapp-jobs-next-ts-frontend-backend" 
+            href={process.env.NEXT_PUBLIC_REPOSITORY_URL} 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2"
@@ -67,7 +67,7 @@ export default function OpenSource() {
             <span>Ver no GitHub</span>
           </a>
           <a 
-            href="https://github.com/oismaelash/whatsapp-jobs-next-ts-frontend-backend/issues" 
+            href={`${process.env.NEXT_PUBLIC_REPOSITORY_URL}/issues`} 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-white text-purple-600 hover:bg-gray-50 border border-purple-200 px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2"

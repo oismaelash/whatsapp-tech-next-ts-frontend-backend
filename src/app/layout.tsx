@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TechVagas - Encontre vagas de tecnologia em grupos de WhatsApp",
+  title: `${process.env.NEXT_PUBLIC_PROJECT_NAME} - Encontre vagas de tecnologia em grupos de WhatsApp`,
   description: "Uma lista organizada de canais e grupos para você entrar agora mesmo e aumentar suas chances de conseguir a próxima oportunidade.",
 };
 

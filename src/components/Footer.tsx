@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 text-center">
         <div className="flex justify-center items-center space-x-2 mb-4">
           <FontAwesomeIcon icon={faWhatsappBrand} className="text-2xl text-green-500" />
-          <span className="text-xl font-bold">TechVagas</span>
+          <span className="text-xl font-bold">{process.env.NEXT_PUBLIC_PROJECT_NAME}</span>
         </div>
         <p className="text-gray-400 mb-6">Projeto independente para ajudar a comunidade de tecnologia. Atualizado periodicamente.</p>
         <div className="flex justify-center space-x-6">

@@ -14,7 +14,7 @@ export default function OpenSourceBanner() {
         <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
           <span className="text-sm opacity-90 text-center md:text-left">Contribua e ajude a comunidade</span>
           <a 
-            href="https://github.com/oismaelash/whatsapp-jobs-next-ts-frontend-backend" 
+            href={process.env.NEXT_PUBLIC_REPOSITORY_URL} 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-white text-purple-600 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center space-x-2 shadow-md hover:shadow-lg"

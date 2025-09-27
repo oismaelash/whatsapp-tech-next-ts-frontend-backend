@@ -76,8 +76,19 @@ export default function Groups() {
     <section id="groups" className="py-8 md:py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Lista de Grupos e Canais</h2>
-          <p className="text-lg md:text-xl text-gray-600">Escolha a categoria que mais se adequa ao seu perfil</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">
+            Lista de Grupos e Canais
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600">
+            Escolha a categoria que mais se adequa ao seu perfil
+          </p>
+          <p className="text-base text-gray-500 mt-2">
+            Total de grupos: {
+              groupsData.categories
+                ? groupsData.categories.reduce((acc, cat) => acc + (cat.groups ? cat.groups.length : 0), 0)
+                : 0
+            }
+          </p>
         </div>
 
         <div className="flex justify-center mb-6 md:mb-8">

@@ -59,18 +59,18 @@ export default function Groups() {
   }, [isDropdownOpen]);
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Lista de Grupos e Canais</h2>
-          <p className="text-xl text-gray-600">Escolha a categoria que mais se adequa ao seu perfil</p>
+    <section className="py-8 md:py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Lista de Grupos e Canais</h2>
+          <p className="text-lg md:text-xl text-gray-600">Escolha a categoria que mais se adequa ao seu perfil</p>
         </div>
 
-        <div className="flex justify-center mb-8">
-          <div className="relative dropdown-container">
+        <div className="flex justify-center mb-6 md:mb-8">
+          <div className="relative dropdown-container w-full max-w-xs md:max-w-none">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="appearance-none bg-white border border-gray-300 rounded-lg px-6 py-3 pr-10 text-gray-700 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm cursor-pointer min-w-[200px] flex items-center justify-between"
+              className="appearance-none bg-white border border-gray-300 rounded-lg px-4 md:px-6 py-3 pr-10 text-gray-700 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm cursor-pointer w-full md:min-w-[200px] flex items-center justify-between"
             >
               <div className="flex items-center space-x-2">
                 {activeCategory && (
@@ -102,10 +102,10 @@ export default function Groups() {
                       setActiveCategory(category.key);
                       setIsDropdownOpen(false);
                     }}
-                    className="w-full px-6 py-3 text-left hover:bg-gray-50 flex items-center space-x-2 transition-colors duration-200"
+                    className="w-full px-4 md:px-6 py-3 text-left hover:bg-gray-50 flex items-center space-x-2 transition-colors duration-200"
                   >
                     <FontAwesomeIcon icon={iconMap[category.icon]} className="text-gray-600" />
-                    <span className="text-gray-700 font-medium">{category.label}</span>
+                    <span className="text-gray-700 font-medium text-sm md:text-base">{category.label}</span>
                   </button>
                 ))}
               </div>
@@ -123,19 +123,19 @@ export default function Groups() {
               return (
                 <div
                   key={index}
-                  className={`flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200 ${
+                  className={`flex flex-col md:flex-row md:items-center md:justify-between p-4 hover:bg-gray-50 transition-colors duration-200 ${
                     !isLastItem ? 'border-b border-gray-100' : ''
                   }`}
                 >
-                  <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <div className="flex items-start md:items-center space-x-3 md:space-x-4 mb-3 md:mb-0">
+                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <FontAwesomeIcon icon={faWhatsappBrand} className="text-lg text-green-600" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900">{group.name}</h3>
-                      <div className="flex items-center space-x-3 mt-1">
-                        <span className="text-sm text-gray-500">{group.members} membros</span>
-                        <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-semibold text-gray-900 text-sm md:text-base truncate">{group.name}</h3>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 mt-1 space-y-1 sm:space-y-0">
+                        <span className="text-xs md:text-sm text-gray-500">{group.members} membros</span>
+                        <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full w-fit">
                           {group.category}
                         </span>
                       </div>
@@ -145,10 +145,11 @@ export default function Groups() {
                     href={group.whatsapp_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-lg whitespace-nowrap cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm font-medium transition-colors duration-200 flex items-center space-x-2"
+                    className="rounded-lg cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm font-medium transition-colors duration-200 flex items-center justify-center space-x-2 w-full md:w-auto"
                   >
                     <FontAwesomeIcon icon={faWhatsappBrand} />
-                    <span>Entrar no grupo</span>
+                    <span className="hidden sm:inline">Entrar no grupo</span>
+                    <span className="sm:hidden">Entrar</span>
                   </a>
                 </div>
               );

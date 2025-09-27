@@ -5,6 +5,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp as faWhatsappBrand } from '@fortawesome/free-brands-svg-icons';
 
 export default function Header() {
+  const scrollToGroups = () => {
+    const groupsSection = document.getElementById('groups');
+    if (groupsSection) {
+      groupsSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <header className="bg-gradient-to-br from-blue-50 to-green-50 relative overflow-hidden">
       <div 
@@ -25,7 +35,10 @@ export default function Header() {
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Uma lista organizada de canais e grupos para você entrar agora mesmo e aumentar suas chances de conseguir a próxima oportunidade.
             </p>
-            <button className="rounded-lg whitespace-nowrap cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-200 inline-flex items-center space-x-2">
+            <button 
+              onClick={scrollToGroups}
+              className="rounded-lg whitespace-nowrap cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-200 inline-flex items-center space-x-2"
+            >
               <FontAwesomeIcon icon={faWhatsappBrand} className="text-xl" />
               <span>Acessar lista de grupos</span>
             </button>

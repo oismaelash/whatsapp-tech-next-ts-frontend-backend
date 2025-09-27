@@ -20,7 +20,7 @@ export default function Home() {
       <Groups />
       <Newsletter />
       <OpenSource />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

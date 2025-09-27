@@ -59,7 +59,7 @@ export default function Groups() {
   }, [isDropdownOpen]);
 
   return (
-    <section className="py-8 md:py-16 bg-gray-50">
+    <section id="groups" className="py-8 md:py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Lista de Grupos e Canais</h2>

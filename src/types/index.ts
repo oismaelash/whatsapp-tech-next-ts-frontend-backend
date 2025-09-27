@@ -2,7 +2,7 @@ export interface Group {
   name: string;
   members: string;
   category: string;
-  link?: string;
+  whatsapp_link: string;
   description?: string;
 }
 

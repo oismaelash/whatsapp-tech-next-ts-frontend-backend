@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -18,38 +18,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { 
   faWhatsapp as faWhatsappBrand,
-  faTwitter,
-  faLinkedin,
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
 import { GroupsData, Category, EmailForm, ContactForm } from '@/types';
-
-const groupsData: GroupsData = {
-  frontend: [
-    { name: "Vagas Frontend Brasil", members: "15.2k", category: "Frontend" },
-    { name: "React Jobs BR", members: "8.5k", category: "Frontend" },
-    { name: "Vue.js Vagas", members: "6.3k", category: "Frontend" },
-    { name: "Angular Opportunities", members: "4.7k", category: "Frontend" }
-  ],
-  backend: [
-    { name: "Vagas Backend Brasil", members: "12.8k", category: "Backend" },
-    { name: "Node.js Jobs", members: "9.1k", category: "Backend" },
-    { name: "Python Vagas BR", members: "11.4k", category: "Backend" },
-    { name: "Java Opportunities", members: "7.9k", category: "Backend" }
-  ],
-  mobile: [
-    { name: "Vagas Mobile Brasil", members: "10.3k", category: "Mobile" },
-    { name: "React Native Jobs", members: "6.8k", category: "Mobile" },
-    { name: "Flutter Vagas", members: "5.2k", category: "Mobile" },
-    { name: "iOS/Android Jobs", members: "8.7k", category: "Mobile" }
-  ],
-  geral: [
-    { name: "Vagas Tech Brasil", members: "25.6k", category: "Geral" },
-    { name: "Oportunidades TI", members: "18.9k", category: "Geral" },
-    { name: "Tech Jobs Community", members: "14.2k", category: "Geral" },
-    { name: "Startups Vagas", members: "12.1k", category: "Geral" }
-  ]
-};
 
 const categories: Category[] = [
   { key: "frontend", label: "Frontend", icon: faCode },
@@ -60,6 +31,12 @@ const categories: Category[] = [
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState('frontend');
+  const [groupsData, setGroupsData] = useState<GroupsData>({
+    frontend: [],
+    backend: [],
+    mobile: [],
+    geral: []
+  });
   const [emailForm, setEmailForm] = useState<EmailForm>({ name: '', email: '' });
   const [contactForm, setContactForm] = useState<ContactForm>({
     contact_type: 'broken_link',
@@ -68,6 +45,20 @@ export default function Home() {
     email: '',
     message: ''
   });
+
+  useEffect(() => {
+    const fetchGroupsData = async () => {
+      try {
+        const response = await fetch('/groups.json');
+        const data = await response.json();
+        setGroupsData(data);
+      } catch (error) {
+        console.error('Erro ao carregar dados dos grupos:', error);
+      }
+    };
+
+    fetchGroupsData();
+  }, []);
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -252,10 +243,15 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <button className="rounded-lg whitespace-nowrap cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm font-medium transition-colors duration-200 flex items-center space-x-2">
+                <a 
+                  href={group.whatsapp_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg whitespace-nowrap cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm font-medium transition-colors duration-200 flex items-center space-x-2"
+                >
                   <FontAwesomeIcon icon={faWhatsappBrand} />
                   <span>Entrar no grupo</span>
-                </button>
+                </a>
               </div>
             ))}
           </div>

@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TechVagas - WhatsApp Jobs Platform
 
-## Getting Started
+Uma plataforma moderna para encontrar vagas de tecnologia em grupos de WhatsApp, construída com Next.js, TypeScript e Tailwind CSS.
 
-First, run the development server:
+## 🚀 Funcionalidades
+
+- **Lista organizada de grupos**: Categorias separadas por Frontend, Backend, Mobile e Geral
+- **Interface moderna**: Design responsivo com Tailwind CSS
+- **Filtros interativos**: Navegação fácil entre categorias
+- **Formulários funcionais**: Newsletter e contato
+- **Ícones FontAwesome**: Interface visual rica
+
+## 🛠️ Tecnologias
+
+- **Next.js 15** - Framework React
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização
+- **FontAwesome** - Ícones
+- **React Hooks** - Gerenciamento de estado
+
+## 📦 Instalação
 
 ```bash
+# Clone o repositório
+git clone <repository-url>
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Estrutura do Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/
+│   ├── layout.tsx      # Layout principal
+│   ├── page.tsx        # Página inicial
+│   └── globals.css     # Estilos globais
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Seções da Aplicação
 
-## Learn More
+1. **Header** - Logo e navegação
+2. **Hero Section** - Apresentação principal
+3. **Features** - Benefícios da plataforma
+4. **CTA Section** - Call-to-action
+5. **Groups Section** - Lista de grupos por categoria
+6. **Newsletter** - Formulário de cadastro
+7. **Contact** - Formulário de contato
+8. **Footer** - Links e informações
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Categorias de Grupos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend**: React, Vue.js, Angular
+- **Backend**: Node.js, Python, Java
+- **Mobile**: React Native, Flutter, iOS/Android
+- **Geral**: Vagas de tecnologia em geral
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Scripts Disponíveis
 
-## Deploy on Vercel
+```bash
+npm run dev      # Desenvolvimento
+npm run build    # Build de produção
+npm run start    # Servidor de produção
+npm run lint     # Verificação de código
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 Licença
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto é independente e tem como objetivo ajudar a comunidade de tecnologia brasileira.
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para:
+
+- Reportar bugs
+- Sugerir novas funcionalidades
+- Enviar pull requests
+- Melhorar a documentação
+
+## 📞 Contato
+
+Para dúvidas ou sugestões, entre em contato através do formulário na aplicação.

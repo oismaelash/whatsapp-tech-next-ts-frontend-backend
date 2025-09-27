@@ -3,11 +3,14 @@
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp as faWhatsappBrand } from '@fortawesome/free-brands-svg-icons';
+import { analytics } from '@/lib/analytics';
 
 export default function Header() {
   const scrollToGroups = () => {
     const groupsSection = document.getElementById('groups');
     if (groupsSection) {
+      analytics.trackCTAClick('Acessar lista de grupos', 'header');
+      analytics.trackScrollToGroups();
       groupsSection.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
@@ -20,7 +23,7 @@ export default function Header() {
       <div 
         className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: "url('https://readdy.ai/api/search-image?query=modern%20technology%20workspace%20with%20smartphones%20laptops%20and%20digital%20communication%20icons%20floating%20in%20a%20clean%20minimalist%20environment%20with%20soft%20blue%20and%20green%20lighting%20professional%20atmosphere&width=1440&height=600&seq=header-bg-001&orientation=landscape')",
+          // backgroundImage: "url('https://readdy.ai/api/search-image?query=modern%20technology%20workspace%20with%20smartphones%20laptops%20and%20digital%20communication%20icons%20floating%20in%20a%20clean%20minimalist%20environment%20with%20soft%20blue%20and%20green%20lighting%20professional%20atmosphere&width=1440&height=600&seq=header-bg-001&orientation=landscape')",
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}

@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp as faWhatsappBrand } from '@fortawesome/free-brands-svg-icons';
 import { GroupsData } from '@/types';
+import { analytics, trackEcommerce } from '@/lib/analytics';
 
 // Mapeamento de ícones para strings
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -126,7 +127,12 @@ export default function Groups() {
                     type="text"
                     placeholder="Pesquisar categorias..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => {
+                      setSearchTerm(e.target.value);
+                      if (e.target.value.length > 0) {
+                        analytics.trackCategorySearch(e.target.value);
+                      }
+                    }}
                     className="text-black w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     onClick={(e) => e.stopPropagation()}
                   />
@@ -142,6 +148,7 @@ export default function Groups() {
                           setActiveCategory(category.key);
                           setIsDropdownOpen(false);
                           setSearchTerm('');
+                          analytics.trackCategorySelection(category.label);
                         }}
                         className="w-full px-4 md:px-6 py-3 text-left hover:bg-gray-50 flex items-center space-x-2 transition-colors duration-200"
                       >
@@ -194,6 +201,19 @@ export default function Groups() {
                       : group.whatsapp_link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      const activeCategoryData = groupsData.categories.find(cat => cat.key === activeCategory);
+                      analytics.trackGroupClick(group.name, activeCategoryData?.label || '');
+                      
+                      if (group.whatsapp_link.includes('wa.me')) {
+                        analytics.trackGroupRequest(group.name, activeCategoryData?.label || '');
+                      }
+                      
+                      // Ecommerce tracking
+                      trackEcommerce.viewItem(group.name, group.name, activeCategoryData?.label || '');
+                      trackEcommerce.selectItem(group.name, group.name, activeCategoryData?.label || '');
+                      trackEcommerce.beginCheckout(group.name, group.name, activeCategoryData?.label || '');
+                    }}
                     className="rounded-lg cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm font-medium transition-colors duration-200 flex items-center justify-center space-x-2 w-full md:w-auto"
                   >
                     <FontAwesomeIcon icon={faWhatsappBrand} />

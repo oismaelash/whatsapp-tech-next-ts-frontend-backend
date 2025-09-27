@@ -4,12 +4,14 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { EmailForm } from '@/types';
+import { analytics } from '@/lib/analytics';
 
 export default function Newsletter() {
   const [emailForm, setEmailForm] = useState<EmailForm>({ name: '', email: '' });
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    analytics.trackNewsletterSubmission(emailForm.email);
     console.log('Email form submitted:', emailForm);
   };
 
@@ -18,6 +20,11 @@ export default function Newsletter() {
       ...emailForm,
       [e.target.name]: e.target.value
     });
+    
+    // Track when user starts filling the form
+    if (e.target.name === 'email' && e.target.value.length === 1) {
+      analytics.trackNewsletterFormStart();
+    }
   };
 
   return (

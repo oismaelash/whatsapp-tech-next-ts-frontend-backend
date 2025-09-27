@@ -177,15 +177,15 @@ Este projeto é **independente** e tem como objetivo ajudar a comunidade de tecn
 
 ## 🌐 Links Importantes
 
-- **Site**: [WhatsApp Tech](https://whatsapp-tech.meuguru.tech) (exemplo)
+- **Site**: [WhatsApp Tech](https://whatsapp-tech.meuguru.tech)
 - **Issues**: [GitHub Issues](https://github.com/oismaelash/whatsapp-tech-next-ts-frontend-backend/issues)
 
 ## 📞 Contato
 
-Para dúvidas, sugestões ou parcerias:
+Para dúvidas, sugestões ou parcerias (Ismael Ash):
 
-- 📧 **Email**: contato@ismaelnascimento.com
-- 💬 **WhatsApp**: [wa.me/5511967435133](https://wa.me/5511967435133) (Ismael Ash)
+- 📧 [Email](contato@ismaelnascimento.com)
+- 💬 [WhatsApp](https://wa.me/5511967435133) 
 
 ---
 

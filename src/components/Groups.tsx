@@ -142,14 +142,20 @@ export default function Groups() {
                     </div>
                   </div>
                   <a 
-                    href={group.whatsapp_link}
+                    href={group.whatsapp_link.includes('wa.me') 
+                      ? group.whatsapp_link.replace('{group_name}', group.name)
+                      : group.whatsapp_link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-lg cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm font-medium transition-colors duration-200 flex items-center justify-center space-x-2 w-full md:w-auto"
                   >
                     <FontAwesomeIcon icon={faWhatsappBrand} />
-                    <span className="hidden sm:inline">Entrar no grupo</span>
-                    <span className="sm:hidden">Entrar</span>
+                    <span className="hidden sm:inline">
+                      {group.whatsapp_link.includes('wa.me') ? 'Solicitar link' : 'Entrar no grupo'}
+                    </span>
+                    <span className="sm:hidden">
+                      {group.whatsapp_link.includes('wa.me') ? 'Solicitar link' : 'Entrar'}
+                    </span>
                   </a>
                 </div>
               );

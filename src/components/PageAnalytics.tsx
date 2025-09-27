@@ -13,9 +13,9 @@ export default function PageAnalytics() {
   }, [pathname]);
 
   useEffect(() => {
-    let scrollDepthMarkers = [25, 50, 75, 90, 100];
-    let triggeredMarkers: number[] = [];
-    let startTime = Date.now();
+    const scrollDepthMarkers = [25, 50, 75, 90, 100];
+    const triggeredMarkers: number[] = [];
+    const startTime = Date.now();
     let isTracking = true;
 
     const handleScroll = () => {

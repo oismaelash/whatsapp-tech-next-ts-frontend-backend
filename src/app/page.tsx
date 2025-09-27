@@ -4,9 +4,7 @@ import {
   Features,
   CTA,
   Groups,
-  Newsletter,
   OpenSource,
-  Contact,
   Footer
 } from '@/components';
 
